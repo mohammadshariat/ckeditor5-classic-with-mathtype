@@ -70,24 +70,23 @@ module.exports = {
 						loader: 'style-loader',
 						options: {
 							injectType: 'singletonStyleTag',
-							attributes: {
-								'data-cke': true
-							}
+							// attributes: {
+							// 	'data-cke': true
+							// }
 						}
 					},
-					{
-						loader: 'css-loader'
-					},
+					// {
+					// 	loader: 'css-loader'
+					// },
 					{
 						loader: 'postcss-loader',
-						options: {
-							postcssOptions: styles.getPostCssConfig( {
+						options:  styles.getPostCssConfig( {
 								themeImporter: {
 									themePath: require.resolve( '@ckeditor/ckeditor5-theme-lark' )
 								},
 								minify: true
 							} )
-						}
+
 					},
 				]
 			}
